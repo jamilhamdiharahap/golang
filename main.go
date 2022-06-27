@@ -30,7 +30,7 @@ func main() {
 		r.Post("/api/k4/detailkereta", controllers.DetailKereta)
 	})
 
-	if err := http.ListenAndServe(":"+os.Getenv("PORT")+"", routes); err != nil {
+	if err := http.ListenAndServe(":"+os.Getenv("PORT"), routes); err != nil {
 		log.Fatal(err)
 	}
 	log.Println("Server Running on port 8002")
